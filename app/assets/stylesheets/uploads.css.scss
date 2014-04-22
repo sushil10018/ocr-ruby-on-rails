@@ -1,3 +1,12 @@
 // Place all the styles related to the uploads controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar .brand{
+  float: none;
+  display: inline-block; 
+  font-size: 50px; 
+  padding: 70px;
+}
+body{
+  padding-top: 180px;
+}

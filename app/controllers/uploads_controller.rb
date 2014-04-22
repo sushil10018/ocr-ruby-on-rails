@@ -41,6 +41,7 @@ class UploadsController < ApplicationController
   # POST /uploads.json
   def create
     @upload = Upload.new(params[:upload])
+    binding.pry
 
     respond_to do |format|
       if @upload.save
