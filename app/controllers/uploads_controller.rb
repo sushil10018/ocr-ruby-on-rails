@@ -41,10 +41,9 @@ class UploadsController < ApplicationController
   # POST /uploads.json
   def create
     @upload = Upload.new(params[:upload])
-    binding.pry
-
     respond_to do |format|
       if @upload.save
+        @upload.to_text
         format.html {
           render :json => [@upload.to_jq_upload].to_json,
           :content_type => 'text/html',
@@ -84,5 +83,9 @@ class UploadsController < ApplicationController
       format.html { redirect_to uploads_url }
       format.json { head :no_content }
     end
+  end
+
+  def download
+    
   end
 end

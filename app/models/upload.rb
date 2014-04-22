@@ -1,4 +1,6 @@
 class Upload < ActiveRecord::Base
+  require 'tesseract'
+
   attr_accessible :upload
   has_attached_file :upload
 
@@ -12,6 +14,15 @@ class Upload < ActiveRecord::Base
       "delete_url" => upload_path(self),
       "delete_type" => "DELETE" 
     }
+  end
+
+  def to_text
+    e = Tesseract::Engine.new {|e|
+      e.language  = :eng
+      e.blacklist = '|'
+    }
+    self.text = e.text_for( "#{Rails.root}/public#{self.upload.url}".split("?")[0] ).strip
+    self.save!
   end
 
 end

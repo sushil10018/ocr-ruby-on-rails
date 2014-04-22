@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731045929) do
+ActiveRecord::Schema.define(:version => 20140422065946) do
 
   create_table "uploads", :force => true do |t|
     t.string   "upload_file_name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20120731045929) do
     t.datetime "upload_updated_at"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.text     "text"
   end
 
 end

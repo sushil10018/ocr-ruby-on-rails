@@ -30,6 +30,9 @@ gem 'jquery-fileupload-rails'
 gem 'paperclip'
 gem 'twitter-bootstrap-rails'
 
+# Gem for OCR in ruby
+gem "tesseract-ocr"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
