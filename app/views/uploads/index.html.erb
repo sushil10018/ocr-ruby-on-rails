@@ -105,10 +105,10 @@
         <td colspan="1"></td>
         {% } %}
       <td class="download">
-        <button class="btn btn-primary" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}">
+        <a class="btn btn-primary" href="{%=file.text_url%}" title="{%=file.name%}" rel="{%=file.thumbnail_url&&'gallery'%}" download="{%=file.name + '.txt'%}">
           <i class="icon-download icon-white"></i>
           <span>Download as txt</span>
-        </button>
+        </a>
       </td>
       <td class="delete">
         <button class="btn btn-danger" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}">

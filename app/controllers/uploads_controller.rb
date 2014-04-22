@@ -84,8 +84,4 @@ class UploadsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  def download
-    
-  end
 end
