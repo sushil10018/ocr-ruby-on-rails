@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-JqueryFileuploadRailsExample::Application.load_tasks
+Rubyocr::Application.load_tasks

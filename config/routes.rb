@@ -1,4 +1,4 @@
-JqueryFileuploadRailsExample::Application.routes.draw do
+Rubyocr::Application.routes.draw do
   resources :uploads
   root :to => 'uploads#index'
   get 'uploads/download' => 'uploads#download'
